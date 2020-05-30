@@ -9,7 +9,7 @@ export default function RouteWrapper({
   isPrivate,
   ...rest
 }) {
-  const signed = true;//isAuthenticated();
+  const signed = isAuthenticated();
 
   if (!signed && isPrivate) {
     return <Redirect to="/" />;
